@@ -1,0 +1,16 @@
+<!--miniprogram/pages/adimin/admin.wxml-->
+<view class="title">欢迎使用管理页面</view>
+<view wx:for="{{obj}}" wx:for-index="i" >
+  <view class="view2" hidden="{{item.show}}">
+    <view class="view1">
+     {{item.date}}  {{item.time}}：{{item.reason}}
+    </view>
+    <view>
+       <button class="button1" type="primary" size="mini" bindtap="promise" id="{{i}}"> 允  许 </button>
+       <button class="button2" type="warn" size="mini" bindtap="refuse"   id="{{i}}"> 拒     绝 </button>
+    </view>
+    <view wx:if="{{item.situation!=''}}" class="text">
+    <text>处理结果为{{item.situation}}</text>
+    </view>
+  </view>
+</view>

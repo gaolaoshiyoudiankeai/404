@@ -1,0 +1,33 @@
+/* pages/admin/admin.wxss */
+.title{
+   display: flex;
+   justify-content: center;
+}
+
+.button1{
+  display:inline-block;
+  margin-right: 10%;
+  margin-left: 10%;
+  background-color: rgb(21, 255, 0);
+}
+.button2{
+  background-color: red;
+  display:inline-block;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.view1{
+  display: flex;
+  justify-content: center;
+}
+
+.view2{
+border:1px solid #CC3333;
+border-radius: 8px;
+margin-top:10px; 
+}
+
+.text{
+  text-align: center;
+}

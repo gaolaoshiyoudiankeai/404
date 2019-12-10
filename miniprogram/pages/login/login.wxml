@@ -1,0 +1,19 @@
+<!--pages/login/login.wxml-->
+<image src="../index/images/bg2.jpg" class='img' mode='widthFix'></image>
+<text class="text">欢迎使用会议室预约系统</text>
+<view class="view1">
+  <form bindsubmit="formSubmit">
+    <view class="view2">账号</view>
+    <input maxlength="11" placeholder="请输入校园卡号" type="number"       placeholder-style="color:black" name="id" class="input"/>
+    <view class="view2">密码</view>
+    <input password type="text" placeholder="请输入密码"  maxlength="15" placeholder-style="color:black" name="password" class="input"/>
+    <view class="view3">
+    <button   class="button" formType="submit" type="default" id="0" size="default">登录</button>
+    <button   class="button" formType="submit" id="1" type="default" size="default">管理员登录</button>
+    </view>
+  </form>
+  <view>
+    <modal title="提示" hidden="{{modalHidden}}" confirm-text="确定"  bindconfirm="modalBindaconfirm" bindcancel="modalBindcancel">密码和账号不能为空</modal>
+  </view>
+</view>
+

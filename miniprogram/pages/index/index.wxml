@@ -1,0 +1,73 @@
+<!--index.wxml-->
+
+
+<view class="container">
+  <view class="page-body">
+    <view class="page-section page-section-spacing swiper">
+      <swiper indicator-dots="{{indicatorDots}}" class= 'swiper'
+        autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" >
+        <swiper-item>
+        <image src='images/ASD1.jpg'></image>
+         </swiper-item>
+         <swiper-item>
+        <image src='images/ASD2.jpg'></image>
+         </swiper-item>
+         <swiper-item>
+        <image src='images/ASD3.jpg'></image>
+         </swiper-item>
+        
+       
+      </swiper>
+    </view> 
+    <view class='title'><text>404会议室预约</text></view>
+    <view class='iforder'  >
+     <button disabled="1" size="mini" type="warn" font-size="20rpx">不可预约</button>
+     <button disabled="1" size="mini" type="primary" left="400rpx">可预约</button>
+     <!-- 需要调节位置 -->
+    </view>
+    <!-- 二维数组遍历建立预约表 -->
+     <view class= 'iforder' >
+      <block  wx:for='{{ date }}' wx:for-index="i">
+      <block wx:for='{{item}}' wx:for-item='con' wx:for-index="j" >
+       <view class= 'iforder' bindtap="change" id='{{4*i+j+1}}'>
+        <block wx:if="{{j==0||i==0}}">
+         <label class='label1' disabled='true'>
+         {{con}}
+         </label> 
+        </block>
+        <block wx:else>
+         <block wx:if="{{con=='0'||con=='3'}}" >
+          <button class='btn1' disabled="true"></button>
+         </block>
+         <block wx:if="{{con=='1'}}" >
+            <block wx:if="{{(4*i+j+1)!=click}}" >
+            <button class='btn2'  ></button>
+         </block>
+         <block wx:if="{{(4*i+j+1)==click}}" >
+            <button class='btn2'  ></button>
+         </block>
+            
+         </block>
+         <block wx:if="{{con=='2'}}" >
+            <button class='btn3' ></button>
+          </block>
+          <block wx:if="{{con=='4'}}" >
+            <button class='btn3' disabled="true"></button>
+          </block>
+        </block>
+       </view>
+      </block>
+     </block>
+    </view>
+    <view>
+    </view>
+  </view>
+
+</view>
+<view class="iforder">申请理由：
+    <input class="input" name="userName" placeholder="请在这里填写申请理由" value=""    bindinput ="reason"/>
+  </view>
+
+  <view class='sub' >
+    <button class='btn' bindtap="submit">预约</button>
+  </view>

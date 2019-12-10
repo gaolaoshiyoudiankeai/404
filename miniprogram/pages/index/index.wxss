@@ -1,0 +1,214 @@
+/**index.wxss**/
+
+page {
+  background: #f6f6f6;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.userinfo, .uploader, .tunnel {
+  margin-top: 40rpx;
+  height: 140rpx;
+  width: 100%;
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-left: none;
+  border-right: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  transition: all 300ms ease;
+}
+
+.userinfo-avatar {
+  width: 100rpx;
+  height: 100rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+  background-size: cover;
+  background-color: white;
+}
+
+.userinfo-avatar:after {
+  border: none;
+}
+
+.userinfo-nickname {
+  font-size: 32rpx;
+  color: #007aff;
+  background-color: white;
+  background-size: cover;
+}
+
+.userinfo-nickname::after {
+  border: none;
+}
+
+.uploader, .tunnel {
+  height: auto;
+  padding: 0 0 0 40rpx;
+  flex-direction: column;
+  align-items: flex-start;
+  box-sizing: border-box;
+}
+
+.uploader-text, .tunnel-text {
+  width: 100%;
+  line-height: 52px;
+  font-size: 34rpx;
+  color: #007aff;
+}
+
+.uploader-container {
+  width: 100%;
+  height: 400rpx;
+  padding: 20rpx 20rpx 20rpx 0;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  box-sizing: border-box;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.uploader-image {
+  width: 100%;
+  height: 360rpx;
+}
+
+.tunnel {
+  padding: 0 0 0 40rpx;
+}
+
+.tunnel-text {
+  position: relative;
+  color: #222;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.tunnel-text:first-child {
+  border-top: none;
+}
+
+.tunnel-switch {
+  position: absolute;
+  right: 20rpx;
+  top: -2rpx;
+}
+
+.disable {
+  color: #888;
+}
+
+.service {
+  position: fixed;
+  right: 40rpx;
+  bottom: 40rpx;
+  width: 140rpx;
+  height: 140rpx;
+  border-radius: 50%;
+  background: linear-gradient(#007bfffa, #0063ce);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  transition: all 300ms ease;
+}
+
+.service-button {
+  position: absolute;
+  top: 40rpx;
+}
+
+.service:active {
+  box-shadow: none;
+}
+
+.request-text {
+  padding: 20rpx 0;
+  font-size: 24rpx;
+  line-height: 36rpx;
+  word-break: break-all;
+}
+.swiper{
+ 
+  margin-left: 2%;
+  margin-right: 2%;
+  height: 300rpx;
+  margin-top: 0rpx;
+ 
+}
+.label1{
+  
+  height: 50rpx;
+  width: 140rpx;
+  font-size: 30rpx;
+  text-align: center;
+ 
+}
+.text1{
+  font-size: 30rpx;
+  text-align: center;
+}
+.title{
+  margin-left: 30%;
+  margin-right: 5%;
+
+}
+/* 是否有人预约了的第一层视图 */
+.iforder{
+
+  margin-left: 5%;
+  margin-right: 5%;
+
+ 
+
+}
+/* 第二层视图，即放一个二维button数组的视图 */
+.iforder>.iforder{
+
+  margin: 10rpx;
+
+  float: left;
+
+  width: 140rpx;
+
+}
+/* button类型 */
+.iforder>.iforder>.btn1{
+  width:140rpx;
+  height:50rpx;
+
+  background-color: hsl(0, 94%, 50%);  
+}
+
+.iforder>.iforder>.btn2{
+  width:140rpx;
+  height:50rpx;
+  background-color: hsl(115, 94%, 50%);  
+  
+
+}
+.iforder>.iforder>.btn3{
+  width:140rpx;
+  height:50rpx;
+
+  background-color: hsl(256, 94%, 50%);  
+}
+.sub{
+  margin-left: 50%;
+  margin-right: 5%;
+
+}
+.sub>.btn{
+  width:220rpx;
+  background-color: hsl(157, 94%, 50%); 
+  font-size: 20%; 
+  text-align: center;
+  
+}
